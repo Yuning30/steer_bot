@@ -6,7 +6,8 @@
 
     <!-- Gazebo  -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" default="$(arg world_name)"/>
+        <arg name="world_name" default="$(find steer_bot_gazebo)/../../part2/part2_world"/>
+        <arg name="verbose" value="true"/>
     </include>
 
     <include file="$(find steer_bot_gazebo)/launch/steer_bot_sim.launch">
