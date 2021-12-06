@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+   
+    <arg name="world_name" default="worlds/empty_world" />
+
+    <!-- Gazebo  -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" default="$(arg world_name)"/>
+    </include>
+
+    <include file="$(find steer_bot_gazebo)/launch/steer_bot_sim.launch">
+    </include>
+
+    <include file="$(find steer_bot_gazebo)/launch/bicycle_bot_sim.launch">
+    </include>
+    
+
+</launch>
